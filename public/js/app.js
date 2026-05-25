@@ -1,6 +1,5 @@
 // API Configuration
-const API_URL = 'http://localhost:3000';
-
+const API_URL = '';
 // Tool Data
 const TOOLS = [
     { id: 'merge-pdf', name: 'Merge PDF', desc: 'Combine multiple PDFs', icon: 'fa-object-group', cat: 'edit', endpoint: '/api/merge-pdf', accept: '.pdf', multiple: true, fieldName: 'files' },
