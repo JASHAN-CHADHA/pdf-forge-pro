@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All PDF Tools - 15+ Free Online PDF Converters | PDFForge Pro</title>
+    <meta name="description" content="Complete collection of free PDF tools. Convert, merge, split, compress, and add watermarks to PDF files online. No registration required.">
+    <meta name="keywords" content="pdf tools, online pdf converter, free pdf editor, pdf utilities">
+    <link rel="canonical" href="http://localhost:3000/tools.html">
+    <!-- Rest of your head content -->
+</head>
+
+<body>
+    <!-- Breadcrumb Navigation -->
+<div class="breadcrumb" style="padding: 10px 30px; font-size: 13px; color: var(--muted); background: var(--bg2);">
+    <a href="/" style="color: var(--accent); text-decoration: none;">Home</a>
+    <span style="margin: 0 5px;">›</span>
+    <span>Free PDF Tools</span>
+</div>
+    <nav>
+        <div class="logo">PDF<span>Forge</span> Pro</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/tools.html">Tools</a></li>
+            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="/affiliate.html" style="color:var(--gold)">Affiliate</a></li>
+        </ul>
+        <button class="nav-cta" onclick="openModal('pro')">Get Pro Free</button>
+    </nav>
+
+    <div class="main-layout">
+        <div>
+            <section class="tools-section">
+                <div class="section-title">All PDF Tools</div>
+                <div class="section-sub">Professional document conversion at your fingertips</div>
+                <div class="tabs">
+                    <button class="tab-btn active" data-category="all">All</button>
+                    <button class="tab-btn" data-category="convert">Convert</button>
+                    <button class="tab-btn" data-category="edit">Edit</button>
+                    <button class="tab-btn" data-category="security">Security</button>
+                </div>
+                <div class="tools-grid" id="tools-grid"></div>
+            </section>
+
+            <section class="workspace">
+                <div class="converter-box">
+                    <div class="converter-header">
+                        <div class="converter-title" id="active-tool-name">📄 Select a Tool</div>
+                    </div>
+                    <div class="drop-zone" id="drop-zone">
+                        <div class="drop-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                        <h3>Drop files here</h3>
+                        <p id="drop-zone-text">Click Browse to select files</p><button class="upload-btn"
+                            id="browse-btn">Browse Files</button><input type="file" id="file-input" style="display:none"
+                            multiple>
+                        <div class="file-types" id="file-types">Max 50MB per file</div>
+                    </div>
+                    <div class="file-list" id="file-list"></div>
+                    <div class="action-bar">
+                        <div class="action-info"><span id="file-count">No files</span></div><button class="convert-btn"
+                            id="convert-btn" disabled><i class="fas fa-magic"></i> Convert Now</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <aside class="sidebar">
+            <div class="ad-slot">
+                <div class="ad-slot-label">Ad</div>
+                <div class="ad-banner-tall">AdSense</div>
+            </div>
+            <div class="affiliate-card">
+                <div class="affiliate-label">Partner</div>
+                <div class="affiliate-title">Adobe Acrobat</div><a href="/affiliate.html" class="affiliate-link">Learn
+                    More</a>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div>
+            <div class="logo">PDF<span>Forge</span> Pro</div>
+        </div>
+        <div class="footer-links"><a href="/">Home</a><a href="/tools.html">Tools</a><a href="/pricing.html">Pricing</a>
+        </div>
+    </footer>
+    <div class="modal-overlay" id="modal">
+        <div class="modal"><button class="modal-close" onclick="closeModal()">×</button>
+            <h2>Start Free Trial</h2><input type="email" id="modal-email" placeholder="Email"><button
+                class="modal-submit" onclick="handleSignup()">Start</button>
+        </div>
+    </div>
+    <div class="toast" id="toast"><span id="toast-msg"></span></div>
+
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
