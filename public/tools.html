@@ -1,98 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All PDF Tools - 15+ Free Online PDF Converters | PDFForge Pro</title>
+    <title>All PDF Tools - Free Online PDF Converters | PDFForge Pro</title>
     <meta name="description" content="Complete collection of free PDF tools. Convert, merge, split, compress, and add watermarks to PDF files online. No registration required.">
-    <meta name="keywords" content="pdf tools, online pdf converter, free pdf editor, pdf utilities">
-    <link rel="canonical" href="http://localhost:3000/tools.html">
-    <!-- Rest of your head content -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
-    <!-- Breadcrumb Navigation -->
-<div class="breadcrumb" style="padding: 10px 30px; font-size: 13px; color: var(--muted); background: var(--bg2);">
-    <a href="/" style="color: var(--accent); text-decoration: none;">Home</a>
-    <span style="margin: 0 5px;">›</span>
-    <span>Free PDF Tools</span>
-</div>
+
+    <!-- Navigation -->
     <nav>
         <div class="logo">PDF<span>Forge</span> Pro</div>
         <ul class="nav-links">
             <li><a href="/">Home</a></li>
             <li><a href="/tools.html">Tools</a></li>
-            <li><a href="/pricing.html">Pricing</a></li>
-            <li><a href="/affiliate.html" style="color:var(--gold)">Affiliate</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/blog.html">Blog</a></li>
         </ul>
-        <button class="nav-cta" onclick="openModal('pro')">Get Pro Free</button>
     </nav>
 
+    <!-- Main Layout -->
     <div class="main-layout">
         <div>
-            <section class="tools-section">
-                <div class="section-title">All PDF Tools</div>
-                <div class="section-sub">Professional document conversion at your fingertips</div>
+            <!-- Tools Section -->
+            <section class="tools-section" id="tools">
+                <div class="section-title">All PDF Tools - 100% FREE</div>
+                <div class="section-sub">Professional document conversion tools, completely free with no limits</div>
+
                 <div class="tabs">
-                    <button class="tab-btn active" data-category="all">All</button>
+                    <button class="tab-btn active" data-category="all">All Tools</button>
                     <button class="tab-btn" data-category="convert">Convert</button>
                     <button class="tab-btn" data-category="edit">Edit</button>
                     <button class="tab-btn" data-category="security">Security</button>
+                    <button class="tab-btn" data-category="optimize">Optimize</button>
                 </div>
+
                 <div class="tools-grid" id="tools-grid"></div>
             </section>
 
+            <!-- Converter Workspace -->
             <section class="workspace">
                 <div class="converter-box">
                     <div class="converter-header">
                         <div class="converter-title" id="active-tool-name">📄 Select a Tool</div>
+                        <div class="format-select">
+                            Output format:
+                            <select id="output-format">
+                                <option value="pdf">PDF</option>
+                                <option value="jpg">JPG</option>
+                                <option value="png">PNG</option>
+                                <option value="txt">TXT</option>
+                            </select>
+                        </div>
                     </div>
+
                     <div class="drop-zone" id="drop-zone">
                         <div class="drop-icon"><i class="fas fa-cloud-upload-alt"></i></div>
-                        <h3>Drop files here</h3>
-                        <p id="drop-zone-text">Click Browse to select files</p><button class="upload-btn"
-                            id="browse-btn">Browse Files</button><input type="file" id="file-input" style="display:none"
-                            multiple>
-                        <div class="file-types" id="file-types">Max 50MB per file</div>
+                        <h3>Drop your files here</h3>
+                        <p id="drop-zone-text">Supports PDF, JPG, PNG, DOCX and more</p>
+                        <button class="upload-btn" id="browse-btn" type="button">
+                            Browse Files
+                        </button>
+                        <input type="file" id="file-input" style="display: none;" multiple>
+                        <div class="file-types" id="file-types">Max 50MB per file · Unlimited conversions · 100% FREE</div>
                     </div>
+
                     <div class="file-list" id="file-list"></div>
+
+                    <div class="options-panel">
+                        <h4>Conversion Options</h4>
+                        <div class="options-grid">
+                            <div class="option-group">
+                                <label>Quality</label>
+                                <input type="range" min="1" max="100" value="90" id="quality-slider">
+                                <span class="range-val" id="quality-val">90%</span>
+                            </div>
+                            <div class="option-group">
+                                <label>Page Size</label>
+                                <select id="page-size">
+                                    <option value="a4">A4</option>
+                                    <option value="letter">Letter</option>
+                                    <option value="legal">Legal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="action-bar">
-                        <div class="action-info"><span id="file-count">No files</span></div><button class="convert-btn"
-                            id="convert-btn" disabled><i class="fas fa-magic"></i> Convert Now</button>
+                        <div class="action-info">
+                            <span id="file-count-label">No files selected</span>
+                        </div>
+                        <button class="convert-btn" id="convert-btn" disabled>
+                            <i class="fas fa-magic"></i> Convert Now - FREE
+                        </button>
                     </div>
                 </div>
             </section>
         </div>
+
+        <!-- Sidebar -->
         <aside class="sidebar">
             <div class="ad-slot">
-                <div class="ad-slot-label">Ad</div>
-                <div class="ad-banner-tall">AdSense</div>
+                <div class="ad-slot-label">Advertisement</div>
+                <div class="ad-banner-tall">
+                    <div>Google AdSense Slot</div>
+                </div>
             </div>
-            <div class="affiliate-card">
-                <div class="affiliate-label">Partner</div>
-                <div class="affiliate-title">Adobe Acrobat</div><a href="/affiliate.html" class="affiliate-link">Learn
-                    More</a>
+            <div class="ad-slot">
+                <div class="ad-slot-label">Advertisement</div>
+                <div class="ad-banner-tall">
+                    <div>Media.net Slot</div>
+                </div>
             </div>
         </aside>
     </div>
 
+    <!-- Footer -->
     <footer>
         <div>
-            <div class="logo">PDF<span>Forge</span> Pro</div>
+            <div class="logo" style="font-size:1.1rem;margin-bottom:0.3rem;">PDF<span>Forge</span> Pro</div>
+            <div class="footer-copy">© 2025 PDFForge Pro · 100% Free PDF Tools</div>
         </div>
-        <div class="footer-links"><a href="/">Home</a><a href="/tools.html">Tools</a><a href="/pricing.html">Pricing</a>
+        <div class="footer-links">
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+            <a href="/gdpr.html">GDPR</a>
+            <a href="/about.html">About</a>
+            <a href="/blog.html">Blog</a>
         </div>
     </footer>
-    <div class="modal-overlay" id="modal">
-        <div class="modal"><button class="modal-close" onclick="closeModal()">×</button>
-            <h2>Start Free Trial</h2><input type="email" id="modal-email" placeholder="Email"><button
-                class="modal-submit" onclick="handleSignup()">Start</button>
-        </div>
-    </div>
-    <div class="toast" id="toast"><span id="toast-msg"></span></div>
+
+    <div class="toast" id="toast"><i class="fas fa-check-circle"></i> <span id="toast-msg">Done!</span></div>
 
     <script src="/js/app.js"></script>
+    <script>
+        // Handle URL parameter to auto-select tool
+        const urlParams = new URLSearchParams(window.location.search);
+        const toolParam = urlParams.get('tool');
+        if (toolParam) {
+            // Map tool names to selectTool function
+            const toolMap = {
+                'merge-pdf': 'merge-pdf',
+                'compress-pdf': 'compress-pdf',
+                'image-to-pdf': 'image-to-pdf',
+                'word-to-pdf': 'word-to-pdf',
+                'pdf-to-word': 'pdf-to-word',
+                'split-pdf': 'split-pdf',
+                'watermark': 'watermark'
+            };
+            if (toolMap[toolParam]) {
+                setTimeout(() => {
+                    if (typeof selectTool === 'function') {
+                        selectTool(toolMap[toolParam]);
+                    }
+                }, 500);
+            }
+        }
+    </script>
 </body>
-
 </html>
