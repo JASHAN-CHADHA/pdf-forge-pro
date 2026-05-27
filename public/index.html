@@ -1,80 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg'>
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>PDFForge Pro - Best Free Online PDF Tools | Merge, Compress, Convert PDFs</title>
-    <meta name="description" content="100% free online PDF tools. Merge multiple PDFs, compress file size, convert Word to PDF, add watermarks, split pages, and more. No registration required. Unlimited conversions.">
-    <meta name="keywords" content="free pdf tools, merge pdf online, compress pdf, pdf to word converter, image to pdf, split pdf, add watermark to pdf">
-    <meta name="author" content="PDFForge Pro">
+    <title>EasyPDF Tools - Free Online PDF Tools | Merge, Compress, Convert PDFs</title>
+    <meta name="description" content="Free online PDF tools to merge, compress, split, convert Word to PDF, and add watermarks. Easy to use. No signup required. Unlimited conversions.">
+    <meta name="keywords" content="easy pdf tools, merge pdf, compress pdf, pdf to word, image to pdf, split pdf, add watermark, online pdf tools, free pdf converter">
+    <meta name="author" content="EasyPDF Tools">
     <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="PDFForge Pro - Free Online PDF Tools">
-    <meta property="og:description" content="Free PDF tools to merge, compress, split, and convert PDFs. No signup. Unlimited conversions.">
-    <meta property="og:url" content="http://localhost:3000/">
-    <meta property="og:site_name" content="PDFForge Pro">
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="http://localhost:3000/">
-    
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "PDFForge Pro",
-      "description": "Free online PDF tools to merge, compress, split, and convert PDF files",
-      "url": "http://localhost:3000",
-      "applicationCategory": "Utility",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "187000"
-      }
-    }
-    </script>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%236c63ff'/%3E%3Crect x='20' y='20' width='60' height='60' rx='6' fill='white'/%3E%3Ctext x='50' y='65' font-family='Arial' font-size='32' font-weight='bold' fill='%236c63ff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+    <meta property="og:title" content="EasyPDF Tools - Free Online PDF Tools">
+    <meta property="og:description" content="Free PDF tools to merge, compress, split, and convert PDFs. Easy, fast, and completely free.">
+    <meta property="og:url" content="https://easypdftools.com">
+    <meta property="og:site_name" content="EasyPDF Tools">
     
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
 
     <!-- Navigation -->
     <nav>
-        <div class="logo">PDF<span>Forge</span> Pro</div>
+        <div class="logo">Easy<span>PDF</span> Tools</div>
         <ul class="nav-links">
-            <li><a href="#tools">Tools</a></li>
-            <li><a href="#features">Features</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/tools.html">Tools</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="badge"><i class="fas fa-bolt"></i> 100% FREE · No Sign-up Required · Unlimited Conversions</div>
-        <h1>Your All-in-One<br>PDF Powerhouse</h1>
-        <p>Convert, compress, merge, split, edit and sign PDFs — completely FREE. No installs, no accounts, no limits.
-        </p>
+        <h1>Easy PDF Tools -<br>Your PDF Powerhouse</h1>
+        <p>Convert, compress, merge, split, edit and sign PDFs — completely FREE. No installs, no accounts, no limits. Easy to use, fast, and secure.</p>
         <div class="hero-buttons">
             <button class="upload-btn" onclick="document.getElementById('hero-file').click()">
                 <i class="fas fa-upload"></i> Upload PDF
             </button>
-            <button class="secondary-btn"
-                onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'})">
+            <button class="secondary-btn" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'})">
                 Explore Tools
             </button>
             <input type="file" id="hero-file" hidden accept=".pdf,.jpg,.png,.docx" onchange="handleHeroUpload(this)">
@@ -116,7 +87,7 @@
             <!-- Tools Section -->
             <section class="tools-section" id="tools">
                 <div class="section-title">All PDF Tools - 100% FREE</div>
-                <div class="section-sub">Professional document conversion tools, completely free with no limits</div>
+                <div class="section-sub">Easy to use, professional quality, completely free with no limits</div>
 
                 <div class="tabs">
                     <button class="tab-btn active" data-category="all">All Tools</button>
@@ -153,30 +124,12 @@
                             Browse Files
                         </button>
                         <input type="file" id="file-input" style="display: none;" multiple>
-                        <div class="file-types" id="file-types">Max 50MB per file · Unlimited conversions · 100% FREE
-                        </div>
+                        <div class="file-types" id="file-types">Max 50MB per file · Unlimited conversions · 100% FREE</div>
                     </div>
 
                     <div class="file-list" id="file-list"></div>
 
-                    <div class="options-panel">
-                        <h4>Conversion Options</h4>
-                        <div class="options-grid">
-                            <div class="option-group">
-                                <label>Quality</label>
-                                <input type="range" min="1" max="100" value="90" id="quality-slider">
-                                <span class="range-val" id="quality-val">90%</span>
-                            </div>
-                            <div class="option-group">
-                                <label>Page Size</label>
-                                <select id="page-size">
-                                    <option value="a4">A4</option>
-                                    <option value="letter">Letter</option>
-                                    <option value="legal">Legal</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                     <div class="action-bar">
                         <div class="action-info">
@@ -188,24 +141,14 @@
                     </div>
                 </div>
             </section>
-
-            <!-- Inline Ad -->
-            <div style="margin-bottom:2rem;">
-                <div class="ad-slot">
-                    <div class="ad-slot-label">Advertisement</div>
-                    <div class="ad-banner-tall">
-                        <div>Google AdSense Rectangle Slot</div>
-                    </div>
-                </div>
-            </div>
         </div>
 
-        <!-- Sidebar - Remove affiliate card, keep only ads -->
+        <!-- Sidebar -->
         <aside class="sidebar">
             <div class="ad-slot">
                 <div class="ad-slot-label">Advertisement</div>
                 <div class="ad-banner-tall">
-                    <div>Skyscraper Ad Slot</div>
+                    <div>Google AdSense Slot</div>
                 </div>
             </div>
             <div class="ad-slot">
@@ -219,7 +162,7 @@
 
     <!-- Features Section -->
     <section class="features-section" id="features">
-        <div class="section-title">Why Choose PDFForge Pro?</div>
+        <div class="section-title">Why Choose EasyPDF Tools?</div>
         <div class="section-sub">Completely free with no hidden limits</div>
         <div class="features-grid">
             <div class="feature-card">
@@ -255,44 +198,24 @@
         </div>
     </section>
 
-    <!-- Bottom Ad Banner -->
-    <div style="max-width:900px;margin:0 auto 2rem;padding:0 2rem;">
-        <div class="ad-slot">
-            <div class="ad-slot-label">Advertisement</div>
-            <div class="ad-banner">
-                <div>Google AdSense Bottom Banner Slot</div>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer>
         <div>
-            <div class="logo" style="font-size:1.1rem;margin-bottom:0.3rem;">PDF<span>Forge</span> Pro</div>
-            <div class="footer-copy">© 2025 PDFForge Pro · 100% Free PDF Tools</div>
+            <div class="logo" style="font-size:1.1rem;">Easy<span>PDF</span> Tools</div>
+            <div class="footer-copy">© 2025 EasyPDF Tools · 100% Free PDF Tools</div>
         </div>
         <div class="footer-links">
             <a href="/privacy.html">Privacy Policy</a>
             <a href="/terms.html">Terms of Service</a>
             <a href="/gdpr.html">GDPR</a>
-            <a href="/blog.html">Blog</a>
             <a href="/about.html">About</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/contact.html">Contact</a>
         </div>
     </footer>
 
-    <!-- Cookie Banner -->
-    <div class="cookie-banner" id="cookie-banner">
-        <span>🍪 We use cookies to improve your experience.</span>
-        <div class="cookie-btns">
-            <button class="cookie-accept" onclick="acceptCookies()">Accept</button>
-            <button class="cookie-decline" onclick="declineCookies()">Decline</button>
-        </div>
-    </div>
-
-    <!-- Toast -->
     <div class="toast" id="toast"><i class="fas fa-check-circle"></i> <span id="toast-msg">Done!</span></div>
 
     <script src="/js/app.js"></script>
 </body>
-
 </html>

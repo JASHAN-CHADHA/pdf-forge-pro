@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg'>
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All PDF Tools - Free Online PDF Converters | PDFForge Pro</title>
-    <meta name="description" content="Complete collection of free PDF tools. Convert, merge, split, compress, and add watermarks to PDF files online. No registration required.">
+    <title>All PDF Tools - Free Online PDF Converters | EasyPDF Tools</title>
+    <meta name="description" content="Complete collection of free PDF tools. Convert, merge, split, compress, and add watermarks to PDF files online. Easy to use, no registration required.">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav>
-        <div class="logo">PDF<span>Forge</span> Pro</div>
+        <div class="logo">Easy<span>PDF</span> Tools</div>
         <ul class="nav-links">
             <li><a href="/">Home</a></li>
             <li><a href="/tools.html">Tools</a></li>
             <li><a href="/about.html">About</a></li>
             <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Main Layout -->
     <div class="main-layout">
         <div>
-            <!-- Tools Section -->
             <section class="tools-section" id="tools">
                 <div class="section-title">All PDF Tools - 100% FREE</div>
-                <div class="section-sub">Professional document conversion tools, completely free with no limits</div>
+                <div class="section-sub">Easy, fast, and professional PDF tools for everyone</div>
 
                 <div class="tabs">
                     <button class="tab-btn active" data-category="all">All Tools</button>
@@ -41,7 +42,6 @@
                 <div class="tools-grid" id="tools-grid"></div>
             </section>
 
-            <!-- Converter Workspace -->
             <section class="workspace">
                 <div class="converter-box">
                     <div class="converter-header">
@@ -101,7 +101,6 @@
             </section>
         </div>
 
-        <!-- Sidebar -->
         <aside class="sidebar">
             <div class="ad-slot">
                 <div class="ad-slot-label">Advertisement</div>
@@ -118,18 +117,18 @@
         </aside>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div>
-            <div class="logo" style="font-size:1.1rem;margin-bottom:0.3rem;">PDF<span>Forge</span> Pro</div>
-            <div class="footer-copy">© 2025 PDFForge Pro · 100% Free PDF Tools</div>
+            <div class="logo" style="font-size:1.1rem;">Easy<span>PDF</span> Tools</div>
+            <div class="footer-copy">© 2025 EasyPDF Tools · 100% Free PDF Tools</div>
         </div>
         <div class="footer-links">
-            <a href="/privacy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms of Service</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
             <a href="/gdpr.html">GDPR</a>
             <a href="/about.html">About</a>
             <a href="/blog.html">Blog</a>
+            <a href="/contact.html">Contact</a>
         </div>
     </footer>
 
@@ -137,11 +136,9 @@
 
     <script src="/js/app.js"></script>
     <script>
-        // Handle URL parameter to auto-select tool
         const urlParams = new URLSearchParams(window.location.search);
         const toolParam = urlParams.get('tool');
         if (toolParam) {
-            // Map tool names to selectTool function
             const toolMap = {
                 'merge-pdf': 'merge-pdf',
                 'compress-pdf': 'compress-pdf',
