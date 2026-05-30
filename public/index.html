@@ -1,26 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg'>
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>EasyPDF Tools - Free Online PDF Tools | Merge, Compress, Convert PDFs</title>
-    <meta name="description" content="Free online PDF tools to merge, compress, split, convert Word to PDF, and add watermarks. Easy to use. No signup required. Unlimited conversions.">
-    <meta name="keywords" content="easy pdf tools, merge pdf, compress pdf, pdf to word, image to pdf, split pdf, add watermark, online pdf tools, free pdf converter">
+    <title>EasyPDF Tools - Free Image to PDF & PDF Tools Online</title>
+    <meta name="description" content="Free online PDF tools. Convert Image to PDF (JPG to PDF), Merge PDF, Compress PDF, Word to PDF, and more. No signup required. 100% free.">
+    <meta name="keywords" content="image to pdf, jpg to pdf, merge pdf, compress pdf, pdf to word, free pdf tools">
     <meta name="author" content="EasyPDF Tools">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="EasyPDF Tools - Free Online PDF Tools">
-    <meta property="og:description" content="Free PDF tools to merge, compress, split, and convert PDFs. Easy, fast, and completely free.">
+    <meta property="og:title" content="EasyPDF Tools - Free Image to PDF & PDF Tools">
+    <meta property="og:description" content="Convert images to PDF, merge PDFs, compress files, and more. 100% free.">
     <meta property="og:url" content="https://easypdftools.com">
     <meta property="og:site_name" content="EasyPDF Tools">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    
+    <style>
+        /* Additional styles for the new layout */
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .primary-tool-card {
+            background: linear-gradient(135deg, var(--card), rgba(108,99,255,0.15));
+            border: 2px solid var(--accent);
+            transform: scale(1.02);
+        }
+        
+        .primary-tool-card:hover {
+            transform: scale(1.05);
+            box-shadow: var(--glow);
+        }
+        
+        .tool-badge {
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: linear-gradient(135deg, var(--accent), #8b5cf6);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        
+        .features-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-showcase-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg3);
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+        
+        .feature-showcase-item:hover {
+            transform: translateY(-5px);
+            background: var(--card);
+        }
+        
+        .feature-showcase-item i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .quick-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+        
+        .quick-tool-btn {
+            background: var(--bg3);
+            border: 1px solid var(--border2);
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            color: var(--text);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.85rem;
+        }
+        
+        .quick-tool-btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .step-guide {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .step {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.8rem;
+            font-weight: bold;
+        }
+        
+        .converter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .converter-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .step-guide {
+                flex-direction: column;
+                align-items: center;
+            }
+            .converter-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -29,7 +165,7 @@
         <div class="logo">Easy<span>PDF</span> Tools</div>
         <ul class="nav-links">
             <li><a href="/">Home</a></li>
-            <li><a href="/tools.html">Tools</a></li>
+            <li><a href="/tools.html">All Tools</a></li>
             <li><a href="/about.html">About</a></li>
             <li><a href="/blog.html">Blog</a></li>
             <li><a href="/contact.html">Contact</a></li>
@@ -39,16 +175,25 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="badge"><i class="fas fa-bolt"></i> 100% FREE · No Sign-up Required · Unlimited Conversions</div>
-        <h1>Easy PDF Tools -<br>Your PDF Powerhouse</h1>
-        <p>Convert, compress, merge, split, edit and sign PDFs — completely FREE. No installs, no accounts, no limits. Easy to use, fast, and secure.</p>
+        <h1>Convert <span style="color: var(--accent);">Images to PDF</span><br>in Seconds, For Free</h1>
+        <p>The easiest way to convert JPG, PNG, and other images to PDF. Plus 15+ other free PDF tools.</p>
+        
         <div class="hero-buttons">
-            <button class="upload-btn" onclick="document.getElementById('hero-file').click()">
-                <i class="fas fa-upload"></i> Upload PDF
+            <button class="upload-btn" onclick="scrollToConverter()">
+                <i class="fas fa-images"></i> Start Converting Images
             </button>
-            <button class="secondary-btn" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'})">
-                Explore Tools
+            <button class="secondary-btn" onclick="scrollToAllTools()">
+                <i class="fas fa-th-large"></i> Browse All Tools
             </button>
-            <input type="file" id="hero-file" hidden accept=".pdf,.jpg,.png,.docx" onchange="handleHeroUpload(this)">
+        </div>
+        
+        <div class="quick-tools">
+            <button class="quick-tool-btn" onclick="selectToolAndUpdateUI('merge-pdf')"><i class="fas fa-object-group"></i> Merge PDF</button>
+            <button class="quick-tool-btn" onclick="selectToolAndUpdateUI('compress-pdf')"><i class="fas fa-compress-alt"></i> Compress PDF</button>
+            <button class="quick-tool-btn" onclick="selectToolAndUpdateUI('word-to-pdf')"><i class="fas fa-file-word"></i> Word to PDF</button>
+            <button class="quick-tool-btn" onclick="selectToolAndUpdateUI('pdf-to-word')"><i class="fas fa-file-pdf"></i> PDF to Word</button>
+            <button class="quick-tool-btn" onclick="selectToolAndUpdateUI('split-pdf')"><i class="fas fa-cut"></i> Split PDF</button>
+            <button class="quick-tool-btn" onclick="selectToolAndUpdateUI('watermark')"><i class="fas fa-tint"></i> Add Watermark</button>
         </div>
 
         <div class="hero-stats">
@@ -71,131 +216,136 @@
         </div>
     </section>
 
-    <!-- Top Ad Banner -->
-    <div style="max-width:900px;margin:0 auto 1rem;padding:0 2rem;">
-        <div class="ad-slot">
-            <div class="ad-slot-label">Advertisement</div>
-            <div class="ad-banner">
-                <div>Google AdSense Banner Slot</div>
+    <!-- How It Works - Simple Steps -->
+    <div style="max-width: 900px; margin: 0 auto; padding: 2rem;">
+        <h2 style="text-align: center; margin-bottom: 2rem;">How It Works</h2>
+        <div class="step-guide">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Upload Files</h3>
+                <p style="color: var(--muted); font-size: 0.85rem;">Select images or PDFs</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Adjust Settings</h3>
+                <p style="color: var(--muted); font-size: 0.85rem;">Choose options if needed</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Download Result</h3>
+                <p style="color: var(--muted); font-size: 0.85rem;">Get your converted file</p>
             </div>
         </div>
     </div>
 
-    <!-- Main Layout -->
-    <div class="main-layout">
-        <div>
-            <!-- Tools Section -->
-            <section class="tools-section" id="tools">
-                <div class="section-title">All PDF Tools - 100% FREE</div>
-                <div class="section-sub">Easy to use, professional quality, completely free with no limits</div>
-
-                <div class="tabs">
-                    <button class="tab-btn active" data-category="all">All Tools</button>
-                    <button class="tab-btn" data-category="convert">Convert</button>
-                    <button class="tab-btn" data-category="edit">Edit</button>
-                    <button class="tab-btn" data-category="security">Security</button>
-                    <button class="tab-btn" data-category="optimize">Optimize</button>
-                </div>
-
-                <div class="tools-grid" id="tools-grid"></div>
-            </section>
-
-            <!-- Converter Workspace -->
-            <section class="workspace">
-                <div class="converter-box">
+    <!-- Main Converter -->
+    <div class="main-layout" style="max-width: 1200px;">
+        <div style="width: 100%;">
+            <section class="workspace" style="padding: 0;">
+                <div class="converter-box" id="main-converter">
                     <div class="converter-header">
-                        <div class="converter-title" id="active-tool-name">📄 Select a Tool</div>
+                        <div class="converter-title" id="converter-title">🖼️ Image to PDF Converter</div>
                         <div class="format-select">
-                            Output format:
-                            <select id="output-format">
+                            Output:
+                            <select id="output-format" style="background: var(--accent); color: white;">
                                 <option value="pdf">PDF</option>
-                                <option value="jpg">JPG</option>
-                                <option value="png">PNG</option>
-                                <option value="txt">TXT</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="drop-zone" id="drop-zone">
                         <div class="drop-icon"><i class="fas fa-cloud-upload-alt"></i></div>
-                        <h3>Drop your files here</h3>
-                        <p id="drop-zone-text">Supports PDF, JPG, PNG, DOCX and more</p>
+                        <h3 id="drop-title">Drop your images here</h3>
+                        <p id="drop-zone-text">Supports JPG, PNG, GIF, WebP, BMP</p>
                         <button class="upload-btn" id="browse-btn" type="button">
-                            Browse Files
+                            <i class="fas fa-folder-open"></i> <span id="browse-btn-text">Select Images</span>
                         </button>
-                        <input type="file" id="file-input" style="display: none;" multiple>
-                        <div class="file-types" id="file-types">Max 50MB per file · Unlimited conversions · 100% FREE</div>
+                        <input type="file" id="file-input" style="display: none;" multiple accept="image/*">
+                        <div class="file-types" id="file-types-text">Max 50MB per file · Up to 20 images · 100% FREE</div>
                     </div>
 
                     <div class="file-list" id="file-list"></div>
 
-                    
+                    <div class="options-panel" id="options-panel">
+                        <h4>Conversion Options</h4>
+                        <div class="options-grid" id="options-grid">
+                            <div class="option-group">
+                                <label>Page Size</label>
+                                <select id="page-size">
+                                    <option value="a4">A4 (210×297mm)</option>
+                                    <option value="letter">Letter (8.5×11in)</option>
+                                    <option value="fit">Fit to Image</option>
+                                </select>
+                            </div>
+                            <div class="option-group">
+                                <label>Orientation</label>
+                                <select id="orientation">
+                                    <option value="portrait">Portrait</option>
+                                    <option value="landscape">Landscape</option>
+                                </select>
+                            </div>
+                            <div class="option-group">
+                                <label>Quality</label>
+                                <input type="range" min="1" max="100" value="90" id="quality-slider">
+                                <span class="range-val" id="quality-val">90%</span>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="action-bar">
                         <div class="action-info">
                             <span id="file-count-label">No files selected</span>
                         </div>
                         <button class="convert-btn" id="convert-btn" disabled>
-                            <i class="fas fa-magic"></i> Convert Now - FREE
+                            <i class="fas fa-magic"></i> Convert to PDF
                         </button>
                     </div>
                 </div>
             </section>
         </div>
-
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="ad-slot">
-                <div class="ad-slot-label">Advertisement</div>
-                <div class="ad-banner-tall">
-                    <div>Google AdSense Slot</div>
-                </div>
-            </div>
-            <div class="ad-slot">
-                <div class="ad-slot-label">Advertisement</div>
-                <div class="ad-banner-tall">
-                    <div>Media.net Slot</div>
-                </div>
-            </div>
-        </aside>
     </div>
 
-    <!-- Features Section -->
-    <section class="features-section" id="features">
-        <div class="section-title">Why Choose EasyPDF Tools?</div>
-        <div class="section-sub">Completely free with no hidden limits</div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">⚡</div>
+    <!-- Features Showcase -->
+    <div style="max-width: 1200px; margin: 2rem auto; padding: 0 2rem;">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Why Choose EasyPDF Tools?</h2>
+        <div class="features-showcase">
+            <div class="feature-showcase-item">
+                <i class="fas fa-bolt"></i>
                 <h3>Lightning Fast</h3>
-                <p>Instant conversions with no delays</p>
+                <p>Convert in seconds</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">🔒</div>
-                <h3>Bank-Grade Security</h3>
-                <p>256-bit SSL encryption. Files auto-delete after 1 hour</p>
+            <div class="feature-showcase-item">
+                <i class="fas fa-lock"></i>
+                <h3>Privacy First</h3>
+                <p>Files auto-delete</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">🌍</div>
+            <div class="feature-showcase-item">
+                <i class="fas fa-mobile-alt"></i>
                 <h3>Works Everywhere</h3>
-                <p>All browsers and devices supported</p>
+                <p>All devices supported</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">💰</div>
+            <div class="feature-showcase-item">
+                <i class="fas fa-gem"></i>
                 <h3>100% Free</h3>
-                <p>No premium tiers, no hidden costs, no limits</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📦</div>
-                <h3>Batch Processing</h3>
-                <p>Convert up to 10 files at once</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🔗</div>
-                <h3>No Sign-up Required</h3>
-                <p>Use instantly, no account needed</p>
+                <p>No hidden costs</p>
             </div>
         </div>
+    </div>
+
+    <!-- All Tools Section -->
+    <section class="tools-section" id="all-tools" style="padding: 2rem;">
+        <div class="section-title">All PDF Tools - 100% FREE</div>
+        <div class="section-sub">Professional document conversion tools at your fingertips</div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-category="all">All Tools</button>
+            <button class="tab-btn" data-category="convert">Convert</button>
+            <button class="tab-btn" data-category="edit">Edit</button>
+            <button class="tab-btn" data-category="security">Security</button>
+            <button class="tab-btn" data-category="optimize">Optimize</button>
+        </div>
+
+        <div class="tools-grid" id="tools-grid"></div>
     </section>
 
     <!-- Footer -->
@@ -216,6 +366,407 @@
 
     <div class="toast" id="toast"><i class="fas fa-check-circle"></i> <span id="toast-msg">Done!</span></div>
 
-    <script src="/js/app.js"></script>
+    <script>
+        // Tool Data
+        const TOOLS = [
+            { id: 'image-to-pdf', name: 'Image to PDF', desc: 'Convert images to PDF', icon: 'fa-images', cat: 'convert', endpoint: '/api/image-to-pdf', accept: 'image/*', multiple: true, fieldName: 'files' },
+            { id: 'merge-pdf', name: 'Merge PDF', desc: 'Combine multiple PDFs into one', icon: 'fa-object-group', cat: 'edit', endpoint: '/api/merge-pdf', accept: '.pdf', multiple: true, fieldName: 'files' },
+            { id: 'compress-pdf', name: 'Compress PDF', desc: 'Reduce PDF file size', icon: 'fa-compress-alt', cat: 'optimize', endpoint: '/api/compress-pdf', accept: '.pdf', multiple: false, fieldName: 'file' },
+            { id: 'watermark', name: 'Add Watermark', desc: 'Add text watermark to PDF', icon: 'fa-tint', cat: 'edit', endpoint: '/api/watermark', accept: '.pdf', multiple: false, fieldName: 'file' },
+            { id: 'split-pdf', name: 'Split PDF', desc: 'Extract specific pages', icon: 'fa-cut', cat: 'edit', endpoint: '/api/split-pdf', accept: '.pdf', multiple: false, fieldName: 'file' },
+            { id: 'word-to-pdf', name: 'Word to PDF', desc: 'Convert DOCX to PDF', icon: 'fa-file-word', cat: 'convert', endpoint: '/api/word-to-pdf', accept: '.docx', multiple: false, fieldName: 'file' },
+            { id: 'pdf-to-word', name: 'PDF to Word', desc: 'Convert PDF to DOCX', icon: 'fa-file-pdf', cat: 'convert', endpoint: '/api/pdf-to-word', accept: '.pdf', multiple: false, fieldName: 'file' },
+        ];
+
+        let currentTool = { id: 'image-to-pdf', name: 'Image to PDF', endpoint: '/api/image-to-pdf', accept: 'image/*', multiple: true, fieldName: 'files' };
+        let selectedFiles = [];
+        let currentCategory = 'all';
+
+        // DOM Elements
+        let toolsGrid, dropZone, browseBtn, fileInput, fileListDiv, fileCountSpan, convertBtn, dropZoneText, converterTitle, dropTitle, browseBtnText, fileTypesText, optionsPanel;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            toolsGrid = document.getElementById('tools-grid');
+            dropZone = document.getElementById('drop-zone');
+            browseBtn = document.getElementById('browse-btn');
+            fileInput = document.getElementById('file-input');
+            fileListDiv = document.getElementById('file-list');
+            fileCountSpan = document.getElementById('file-count-label');
+            convertBtn = document.getElementById('convert-btn');
+            dropZoneText = document.getElementById('drop-zone-text');
+            converterTitle = document.getElementById('converter-title');
+            dropTitle = document.getElementById('drop-title');
+            browseBtnText = document.getElementById('browse-btn-text');
+            fileTypesText = document.getElementById('file-types-text');
+            optionsPanel = document.getElementById('options-panel');
+            
+            if (toolsGrid) renderTools();
+            setupEventListeners();
+            animateStats();
+            testBackend();
+            
+            // Update quality slider
+            const qualitySlider = document.getElementById('quality-slider');
+            if (qualitySlider) {
+                qualitySlider.addEventListener('input', (e) => {
+                    document.getElementById('quality-val').textContent = e.target.value + '%';
+                });
+            }
+        });
+
+        function testBackend() {
+            fetch('/api/health').catch(e => console.log);
+        }
+
+        function renderTools() {
+            const category = document.querySelector('.tab-btn.active')?.dataset.category || 'all';
+            const filtered = category === 'all' ? TOOLS : TOOLS.filter(t => t.cat === category);
+            
+            toolsGrid.innerHTML = filtered.map(tool => `
+                <div class="tool-card" onclick="selectToolAndUpdateUI('${tool.id}')">
+                    <div class="tool-icon"><i class="fas ${tool.icon}"></i></div>
+                    <h3>${tool.name}</h3>
+                    <p>${tool.desc}</p>
+                </div>
+            `).join('');
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.onclick = () => {
+                    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    renderTools();
+                };
+            });
+        }
+
+        // Main function to update UI when tool is selected
+        function selectToolAndUpdateUI(toolId) {
+            const tool = TOOLS.find(t => t.id === toolId);
+            if (!tool) return;
+            
+            currentTool = tool;
+            
+            // Update converter title
+            if (converterTitle) {
+                if (tool.id === 'image-to-pdf') converterTitle.innerHTML = '🖼️ Image to PDF Converter';
+                else if (tool.id === 'merge-pdf') converterTitle.innerHTML = '📚 Merge PDF Files';
+                else if (tool.id === 'compress-pdf') converterTitle.innerHTML = '📦 Compress PDF';
+                else if (tool.id === 'watermark') converterTitle.innerHTML = '💧 Add Watermark to PDF';
+                else if (tool.id === 'split-pdf') converterTitle.innerHTML = '✂️ Split PDF';
+                else if (tool.id === 'word-to-pdf') converterTitle.innerHTML = '📄 Word to PDF Converter';
+                else if (tool.id === 'pdf-to-word') converterTitle.innerHTML = '📝 PDF to Word Converter';
+                else converterTitle.innerHTML = `📄 ${tool.name}`;
+            }
+            
+            // Update drop zone title
+            if (dropTitle) {
+                if (tool.id === 'image-to-pdf') dropTitle.innerHTML = 'Drop your images here';
+                else if (tool.id === 'merge-pdf') dropTitle.innerHTML = 'Drop your PDF files here';
+                else if (tool.id === 'compress-pdf') dropTitle.innerHTML = 'Drop your PDF file here';
+                else if (tool.id === 'watermark') dropTitle.innerHTML = 'Drop your PDF file here';
+                else if (tool.id === 'split-pdf') dropTitle.innerHTML = 'Drop your PDF file here';
+                else if (tool.id === 'word-to-pdf') dropTitle.innerHTML = 'Drop your Word file here';
+                else if (tool.id === 'pdf-to-word') dropTitle.innerHTML = 'Drop your PDF file here';
+                else dropTitle.innerHTML = 'Drop your files here';
+            }
+            
+            // Update drop zone text
+            if (dropZoneText) {
+                if (tool.accept === 'image/*') {
+                    dropZoneText.innerHTML = 'Supports JPG, PNG, GIF, WebP, BMP';
+                } else if (tool.accept === '.pdf') {
+                    dropZoneText.innerHTML = 'Supports PDF files only';
+                } else if (tool.accept === '.docx') {
+                    dropZoneText.innerHTML = 'Supports Word (.docx) files';
+                } else {
+                    dropZoneText.innerHTML = 'Supports PDF, JPG, PNG, DOCX and more';
+                }
+            }
+            
+            // Update browse button text
+            if (browseBtnText) {
+                if (tool.id === 'image-to-pdf') browseBtnText.innerHTML = 'Select Images';
+                else if (tool.id === 'merge-pdf') browseBtnText.innerHTML = 'Select PDFs';
+                else browseBtnText.innerHTML = 'Browse Files';
+            }
+            
+            // Update file types text
+            if (fileTypesText) {
+                if (tool.id === 'image-to-pdf') {
+                    fileTypesText.innerHTML = 'Max 50MB per file · Up to 20 images · 100% FREE';
+                } else if (tool.id === 'merge-pdf') {
+                    fileTypesText.innerHTML = 'Max 50MB per file · Up to 10 PDFs · 100% FREE';
+                } else {
+                    fileTypesText.innerHTML = 'Max 50MB per file · 100% FREE';
+                }
+            }
+            
+            // Update file input accept and multiple attributes
+            if (fileInput) {
+                fileInput.accept = tool.accept;
+                fileInput.multiple = tool.multiple;
+                fileInput.value = '';
+            }
+            
+            // Update convert button text
+            if (convertBtn) {
+                if (tool.id === 'image-to-pdf') convertBtn.innerHTML = '<i class="fas fa-magic"></i> Convert to PDF';
+                else if (tool.id === 'merge-pdf') convertBtn.innerHTML = '<i class="fas fa-magic"></i> Merge PDFs';
+                else if (tool.id === 'compress-pdf') convertBtn.innerHTML = '<i class="fas fa-magic"></i> Compress PDF';
+                else if (tool.id === 'watermark') convertBtn.innerHTML = '<i class="fas fa-magic"></i> Add Watermark';
+                else if (tool.id === 'split-pdf') convertBtn.innerHTML = '<i class="fas fa-magic"></i> Split PDF';
+                else if (tool.id === 'word-to-pdf') convertBtn.innerHTML = '<i class="fas fa-magic"></i> Convert to PDF';
+                else if (tool.id === 'pdf-to-word') convertBtn.innerHTML = '<i class="fas fa-magic"></i> Convert to Word';
+                else convertBtn.innerHTML = '<i class="fas fa-magic"></i> Convert Now';
+            }
+            
+            // Show/hide options panel based on tool
+            if (optionsPanel) {
+                if (tool.id === 'image-to-pdf') {
+                    optionsPanel.style.display = 'block';
+                } else {
+                    optionsPanel.style.display = 'block'; // Keep visible but you can hide for some tools
+                }
+            }
+            
+            // Clear files
+            clearFiles();
+            
+            // Show toast notification
+            showToast(`${tool.name} selected. Upload your file(s).`);
+            
+            // Scroll to converter
+            document.getElementById('main-converter').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function setupEventListeners() {
+            if (browseBtn) {
+                browseBtn.onclick = () => {
+                    if (fileInput) fileInput.click();
+                };
+            }
+            
+            if (fileInput) {
+                fileInput.onchange = (e) => {
+                    addFiles(Array.from(e.target.files));
+                };
+            }
+            
+            if (dropZone) {
+                dropZone.ondragover = (e) => { e.preventDefault(); dropZone.classList.add('drag-over'); };
+                dropZone.ondragleave = () => dropZone.classList.remove('drag-over');
+                dropZone.ondrop = (e) => {
+                    e.preventDefault();
+                    dropZone.classList.remove('drag-over');
+                    addFiles(Array.from(e.dataTransfer.files));
+                };
+            }
+            
+            if (convertBtn) convertBtn.onclick = startConversion;
+        }
+
+        function addFiles(files) {
+            const maxFiles = currentTool.multiple ? (currentTool.id === 'image-to-pdf' ? 20 : 10) : 1;
+            let filesToAdd = files;
+            
+            if (selectedFiles.length + files.length > maxFiles) {
+                showToast(`Maximum ${maxFiles} file(s) allowed`, 'warning');
+                filesToAdd = files.slice(0, maxFiles - selectedFiles.length);
+            }
+            
+            const validFiles = [];
+            for (const file of filesToAdd) {
+                let isValid = false;
+                if (currentTool.accept === 'image/*') {
+                    if (file.type.startsWith('image/')) isValid = true;
+                } else if (currentTool.accept === '.pdf') {
+                    if (file.name.toLowerCase().endsWith('.pdf')) isValid = true;
+                } else if (currentTool.accept === '.docx') {
+                    if (file.name.toLowerCase().endsWith('.docx')) isValid = true;
+                }
+                
+                if (isValid) {
+                    validFiles.push(file);
+                } else {
+                    showToast(`Invalid file: ${file.name}`, 'error');
+                }
+            }
+            
+            if (validFiles.length === 0) return;
+            
+            selectedFiles.push(...validFiles);
+            renderFileList();
+            if (convertBtn) convertBtn.disabled = false;
+        }
+
+        function renderFileList() {
+            if (!fileListDiv) return;
+            
+            if (selectedFiles.length === 0) {
+                fileListDiv.innerHTML = '';
+                if (fileCountSpan) fileCountSpan.textContent = 'No files selected';
+                return;
+            }
+            
+            fileListDiv.innerHTML = selectedFiles.map((file, index) => `
+                <div class="file-item">
+                    <span>📄 ${file.name} (${(file.size / 1024).toFixed(2)} KB)</span>
+                    <button class="file-item-remove" onclick="removeFile(${index})">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            `).join('');
+            
+            if (fileCountSpan) fileCountSpan.textContent = `${selectedFiles.length} file(s) selected`;
+        }
+
+        function removeFile(index) {
+            selectedFiles.splice(index, 1);
+            renderFileList();
+            if (convertBtn) convertBtn.disabled = selectedFiles.length === 0;
+        }
+
+        function clearFiles() {
+            selectedFiles = [];
+            renderFileList();
+            if (convertBtn) convertBtn.disabled = true;
+            if (fileInput) fileInput.value = '';
+        }
+
+        async function startConversion() {
+            if (!currentTool || selectedFiles.length === 0) {
+                showToast('Please upload files first', 'error');
+                return;
+            }
+            
+            if (convertBtn) {
+                convertBtn.disabled = true;
+                convertBtn.innerHTML = '<div class="loading"></div> Converting...';
+            }
+            
+            try {
+                const formData = new FormData();
+                const fieldName = currentTool.fieldName || (currentTool.multiple ? 'files' : 'file');
+                
+                if (currentTool.multiple) {
+                    selectedFiles.forEach(file => formData.append(fieldName, file));
+                } else {
+                    formData.append(fieldName, selectedFiles[0]);
+                }
+                
+                // Add options for image to PDF
+                if (currentTool.id === 'image-to-pdf') {
+                    const pageSize = document.getElementById('page-size')?.value || 'a4';
+                    const orientation = document.getElementById('orientation')?.value || 'portrait';
+                    const quality = document.getElementById('quality-slider')?.value || '90';
+                    formData.append('pageSize', pageSize);
+                    formData.append('orientation', orientation);
+                    formData.append('quality', quality);
+                }
+                
+                // Handle watermark
+                if (currentTool.id === 'watermark') {
+                    const text = prompt('Enter watermark text:', 'CONFIDENTIAL');
+                    if (text) formData.append('text', text);
+                    else throw new Error('Watermark cancelled');
+                }
+                
+                // Handle split PDF
+                if (currentTool.id === 'split-pdf') {
+                    const pages = prompt('Enter pages to extract (e.g., 1-5 or 1,3,5):', '1');
+                    if (pages) formData.append('pages', pages);
+                    else throw new Error('Split cancelled');
+                }
+                
+                const response = await fetch(`${currentTool.endpoint}`, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (!response.ok) throw new Error('Conversion failed');
+                
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                
+                let extension = '.pdf';
+                if (currentTool.id === 'pdf-to-word') extension = '.docx';
+                
+                a.download = `${currentTool.id}_${Date.now()}${extension}`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+                
+                fetch('/api/track-conversion', { method: 'POST' }).catch(e => console.log);
+                showToast('✅ Conversion successful! File downloaded.', 'success');
+                clearFiles();
+                
+            } catch (error) {
+                showToast(`❌ Error: ${error.message}`, 'error');
+            } finally {
+                if (convertBtn) {
+                    convertBtn.disabled = false;
+                    if (currentTool.id === 'image-to-pdf') {
+                        convertBtn.innerHTML = '<i class="fas fa-magic"></i> Convert to PDF';
+                    } else if (currentTool.id === 'merge-pdf') {
+                        convertBtn.innerHTML = '<i class="fas fa-magic"></i> Merge PDFs';
+                    } else {
+                        convertBtn.innerHTML = '<i class="fas fa-magic"></i> Convert Now';
+                    }
+                }
+            }
+        }
+
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            if (!toast) return;
+            if (toastMsg) toastMsg.textContent = message;
+            toast.classList.add('show');
+            const colors = { error: '#ef4444', warning: '#f59e0b', success: '#10b981' };
+            toast.style.background = colors[type] || colors.success;
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        function animateStats() {
+            const targets = [
+                { id: 'counter1', target: 2400000 },
+                { id: 'counter2', target: 187000 },
+                { id: 'counter3', target: 162 }
+            ];
+            
+            targets.forEach(({ id, target }) => {
+                const el = document.getElementById(id);
+                if (!el) return;
+                let current = 0;
+                const increment = target / 60;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    el.textContent = Math.floor(current).toLocaleString();
+                }, 20);
+            });
+        }
+
+        function scrollToConverter() {
+            document.getElementById('main-converter').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToAllTools() {
+            document.getElementById('all-tools').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Global functions
+        window.selectToolAndUpdateUI = selectToolAndUpdateUI;
+        window.removeFile = removeFile;
+        window.scrollToConverter = scrollToConverter;
+        window.scrollToAllTools = scrollToAllTools;
+    </script>
 </body>
 </html>
